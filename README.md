@@ -33,6 +33,8 @@ ShreysMixologyHub/
 ├── .gitignore
 └── .env (ignored)
 
+```
+
 
 ## 🚀 How to run locally
 
@@ -42,20 +44,27 @@ ShreysMixologyHub/
    cd ShreysMixologyHub
 
 2.Create & activate a virtual environment
+   ```bash
    python -m venv venv
    # Mac/Linux
    source venv/bin/activate
    # Windows
    venv\Scripts\activate
-
+   ```
 3.Install dependencies
+   ```py
    pip install -r requirements.txt
+   ```
 
 4.Add your .env file with your Gemini API key
+   ```.env
    GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+   ```
 
 5.Run it
+   ```py
    app.py
+   ```
 
 6.Open your browser
    http://127.0.0.1:5000/
