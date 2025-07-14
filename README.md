@@ -34,34 +34,26 @@
 
 ## 🚀 How to run locally
 
-1. Clone the repo:
+1. **Clone the repo**
    ```bash
    git clone <your-github-repo-url>
    cd ShreysMixologyHub
-Create & activate a virtual environment:
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
-Install dependencies:
+2.Create & activate a virtual environment
+   python -m venv venv
+   # Mac/Linux
+   source venv/bin/activate
+   # Windows
+   venv\Scripts\activate
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Add your .env with your GEMINI_API_KEY:
+3.Install dependencies
+   pip install -r requirements.txt
 
-ini
-Copy
-Edit
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-Run it:
+4.Add your .env file with your Gemini API key
+   GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-bash
-Copy
-Edit
-python app.py
-Open your browser at http://127.0.0.1:5000/ and vibe!
+5.Run it
+   app.py
+
+6.Open your browser
+   http://127.0.0.1:5000/
