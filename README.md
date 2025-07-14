@@ -26,10 +26,15 @@
 
 📦 ShreysMixologyHub/
 ├── app.py
+
 ├── requirements.txt
+
 ├── templates/
+
 ├── static/
+
 ├── .gitignore
+
 └── .env (ignored)
 
 ## 🚀 How to run locally
