@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShreySpirits: Your Personal Mixologist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cocktails.css') }}">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <header>
+      <h1>✨ShreySpirits✨</h1>
+      <!-- <p>Your personal AI bartender — inspired by whiskey, rum, and wine nights.</p> -->
+      <p>Tell Shrey what’s in your bar and get the perfect sip.</p>
+    </header>
+
+    <form method="POST" id="cocktail-form">
+      <label for="ingredients">What's on your shelf?</label>
+      <input type="text" name="ingredients" placeholder="e.g., whiskey, mint, lime" required>
+      <!-- <button type="submit" id="shake-btn">Craft My Cocktail 🍸</button> -->
+      <button type="submit" id="shake-btn">Shake it up!🍷</button>
+    </form>
+
+    {% if cocktail %}
+      <div class="result fade-in">
+        <h2>{{ cocktail.name }}</h2>
+        {% if cocktail.image %}
+          <img src="{{ cocktail.image }}" alt="{{ cocktail.name }}">
+        {% endif %}
+        <h3>Official Instructions:</h3>
+        <p>{{ cocktail.instructions }}</p>
+      </div>
+    {% endif %}
+
+    {% if ai_response %}
+      <div class="ai-result fade-in">
+        <h3>ShreySpirits Suggests:</h3>
+        <div>{{ ai_response | safe }}</div>
+      </div>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/cocktails.js') }}"></script>
+</body>
+</html>

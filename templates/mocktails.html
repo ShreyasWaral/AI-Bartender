@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShreyMocktails: Fresh & Fun</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mocktails.css') }}">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <header>
+      <h1>🍹ShreyMocktails🍹</h1>
+      <p>Your custom mocktail awaits!</p>
+    </header>
+
+    <form method="POST" id="mocktail-form">
+      <label for="ingredients">What ingredients do you have?</label>
+      <input type="text" name="ingredients" placeholder="e.g., mango, mint, lime" required>
+      <button type="submit" id="mix-btn">Mix it up!</button>
+    </form>
+
+    {% if ai_response %}
+      <div class="ai-result fade-in">
+        <h3>ShreyMocktails Suggests:</h3>
+        <div>{{ ai_response | safe }}</div>
+      </div>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/mocktails.js') }}"></script>
+</body>
+</html>

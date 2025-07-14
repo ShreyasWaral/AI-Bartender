@@ -1,0 +1,127 @@
+/* Base dark lounge background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #f5f3e7;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top, #1c1c1c 0%, #111 80%);
+}
+
+/* Optional subtle swirl for depth */
+.background {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
+  z-index: -1;
+  animation: swirl 40s infinite linear;
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Glass container with warm gold glow */
+.container {
+  background: rgba(28, 28, 28, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 8% auto;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #c08429; /* Whiskey gold */
+}
+
+header p {
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #e0d4b7; /* Light warm gold */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #f5f3e7;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #c08429;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+button {
+  padding: 14px;
+  background: linear-gradient(135deg, #c08429, #f1b248);
+  border: none;
+  border-radius: 8px;
+  color: #1c1c1c;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 132, 41, 0.6);
+}
+
+.result, .ai-result {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-left: 4px solid #7a1f2d; /* Wine red accent */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.result img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.shaking {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}

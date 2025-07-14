@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #f1f1f1;
+  background: linear-gradient(135deg, #0b0c10, #1f2833);
+}
+
+.background {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 70%);
+  z-index: -1;
+  animation: swirl 40s infinite linear;
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 8% auto;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3fcf8e; /* Neon mint accent */
+  text-shadow: 0 0 8px rgba(63, 207, 142, 0.5);
+}
+
+header p {
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #ddd;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #3fcf8e;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f1f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+button {
+  padding: 14px;
+  background: linear-gradient(135deg, #3fcf8e, #21c48b);
+  border: none;
+  border-radius: 8px;
+  color: #0b0c10;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(63, 207, 142, 0.5);
+}
+
+.ai-result {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #3fcf8e;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.shaking {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}

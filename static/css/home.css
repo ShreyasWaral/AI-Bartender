@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("/static/images/background-home.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; /* or adjust to contrast nicely */
+}
+
+
+body {
+  color: #f8f8f8;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  margin-top: 50vh; /* push it down by 20% of the screen height */
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: 'Lobster', cursive;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.choices {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.button {
+  font-family: 'Fredoka', sans-serif;
+  padding: 1rem 2rem;
+  border: none;
+  background: #c6974d;
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.button.cocktails {
+  background: #481004;
+  color: #fff;
+}
+
+.button.mocktails {
+  background: #064706;
+  color: #fff;
+}
+
+.button.appetizers {
+  background: #4f0763;
+  color: #fff;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

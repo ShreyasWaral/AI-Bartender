@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShreyAppetizers: Perfect Pairings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/appetizers.css') }}">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>🍢ShreyAppetizers🍢</h1>
+    <p>Tell me what you’re sipping & I’ll find you the perfect bite!</p>
+
+    <form method="POST">
+      <label for="drink_name">Your Drink</label>
+      <input type="text" name="drink_name" placeholder="e.g., Whisky Sour, Virgin Mojito" required>
+
+      <label for="extra_ingredients">Any Prefered Food Choice</label>
+      <input type="text" name="extra_ingredients" placeholder="e.g., cheese, crackers">
+
+      <button type="submit">Let's Make It!</button>
+    </form>
+
+    {% if ai_response %}
+      <div class="ai-result fade-in">{{ ai_response | safe }}</div>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/appetizers.js') }}"></script>
+</body>
+</html>

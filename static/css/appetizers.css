@@ -1,0 +1,102 @@
+/* ShreyAppetizers - Gourmet Dark Elegance */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #17153B; /* dark indigo base */
+  color: #C8ACD6; /* soft lavender text */
+}
+
+.container {
+  background: rgba(46, 35, 108, 0.5); /* semi-transparent deep purple */
+  border: 2px solid #433D8B; /* bold accent border */
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 8% auto;
+  padding: 50px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #C8ACD6; /* lavender headline */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-weight: 400;
+  color: #433D8B; /* bold purple for subtitle */
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #C8ACD6;
+}
+
+input[type="text"] {
+  padding: 14px;
+  border: 2px solid #433D8B;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(67, 61, 139, 0.3);
+  color: #C8ACD6;
+}
+
+button {
+  padding: 16px;
+  background: linear-gradient(135deg, #433D8B, #2E236C);
+  border: none;
+  border-radius: 8px;
+  color: #C8ACD6;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(67, 61, 139, 0.5);
+}
+
+.ai-result {
+  margin-top: 30px;
+  background: rgba(23, 21, 59, 0.5);
+  border-left: 4px solid #433D8B;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  color: #C8ACD6;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.shaking {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shrey’s Spirits & Bites</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Shrey’s Spirits & Bites</h1>
+    <p>Crafted sips, perfect bites.</p>
+
+    <div class="choices">
+      <button id="spirits-btn" class="button cocktails">Spirits</button>
+      <button id="mocktails-btn" class="button mocktails">Mocktails</button>
+      <button id="appetizers-btn" class="button appetizers">Appetizers</button>      
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
